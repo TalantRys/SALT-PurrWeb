@@ -12,6 +12,14 @@ var swiper = new Swiper('.swiper-box', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints:{
+    1:{
+      direction: 'horizontal',
+    },
+    575:{
+      direction: 'vertical',
+    }
+  }
 });
 
 // Magnific PopUp

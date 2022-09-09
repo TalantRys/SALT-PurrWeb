@@ -148,7 +148,7 @@ main > * {
   padding: 0 28px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .title {
     font-size: 50px;
     line-height: 124%;
@@ -203,7 +203,7 @@ main > * {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header {
     background-color: #7050E5;
   }
@@ -361,7 +361,7 @@ main > * {
 .swiper-pagination {
   position: absolute;
   z-index: 2;
-  right: 83px !important;
+  right: 55px !important;
   top: 40% !important;
   transform: none !important;
   display: flex;
@@ -418,6 +418,9 @@ main > * {
   line-height: 187.5%;
   padding-right: 60px;
   margin: 12px 0 44px 0;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 .preview__link {
   text-align: center;
@@ -425,11 +428,11 @@ main > * {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 15px;
-  line-height: 133.3333333333%;
 }
 .preview__link p {
   margin-bottom: 19px;
+  font-size: 15px;
+  line-height: 133.3333333333%;
 }
 .preview__link .icon {
   -webkit-mask-image: url(../images/icons/Polygon-find_out_more.svg);
@@ -446,6 +449,62 @@ main > * {
 
 .preview-slide__body {
   flex: 0 1 560px;
+}
+.preview-slide__img img {
+  width: 151px;
+}
+
+@media (max-width: 1200px) {
+  .swiper-pagination {
+    right: 35px !important;
+  }
+}
+@media (max-width: 768px) {
+  .preview__title {
+    font-size: 44px;
+    line-height: 100%;
+  }
+  .preview-slide__img img {
+    width: 130px;
+  }
+}
+@media (max-width: 575px) {
+  .main-preview .swiper {
+    max-width: 100vw;
+  }
+  .preview__slide {
+    flex-direction: column-reverse;
+  }
+  .swiper-wrapper {
+    min-height: 450px !important;
+  }
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+@media (max-width: 486px) {
+  .preview__title {
+    font-size: 32px;
+    line-height: 125%;
+  }
+  .preview__text {
+    margin: 16px 0 28px 0;
+    line-height: 125%;
+    font-weight: 500;
+    padding-right: 25px;
+  }
+  .preview__slide {
+    gap: 64px;
+  }
+  .preview-slide__img img {
+    width: 100px;
+  }
+  .preview__link p {
+    font-size: 13px;
+  }
+  .swiper-wrapper {
+    min-height: 520px !important;
+  }
 }
 .stats__container {
   max-width: 902px;
@@ -470,7 +529,7 @@ main > * {
   max-width: 255px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .stats__title {
     line-height: 116.6%;
   }
@@ -491,8 +550,7 @@ main > * {
   letter-spacing: normal;
   text-align: right;
   text-transform: initial;
-  margin-right: 60px;
-  margin-bottom: 70px;
+  margin: 25px 60px 70px 0;
   position: relative;
 }
 .services__title::after {
@@ -541,9 +599,11 @@ main > * {
   }
 }
 @media (max-width: 486px) {
+  .main-services {
+    padding: 48px 0;
+  }
   .services__title {
-    margin-right: 0;
-    margin-bottom: 40px;
+    margin: 30px 0 40px 0;
     font-size: 34px;
     text-align: center;
   }
@@ -639,7 +699,12 @@ main > * {
   line-height: 118.75%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 926px) {
+  .spotlight__video {
+    height: 315px;
+  }
+}
+@media (max-width: 768px) {
   .spotlight__title {
     font-size: 30px;
     line-height: 150%;
@@ -657,6 +722,11 @@ main > * {
   .spotlight__video-title {
     font-size: 23px;
     line-height: 130.4347826087%;
+  }
+}
+@media (min-width: 575px) {
+  .spotlight__container > .spotlight__button {
+    display: none;
   }
 }
 @media (max-width: 575px) {
@@ -692,6 +762,9 @@ main > * {
     font-size: 10px;
     line-height: 140%;
     margin: 16px 0 2px 0;
+  }
+  .spotlight__video-block {
+    margin-top: 25px;
   }
   .spotlight__video-playbtn {
     width: 34px;
@@ -736,6 +809,7 @@ main > * {
   display: flex;
   justify-content: space-between;
   padding-left: 30px;
+  gap: 20px;
 }
 .contact__form {
   font-family: "Raleway";
@@ -762,6 +836,7 @@ main > * {
 }
 .contact__form .WidgetTitle__Header-sc-ruy1gu-2 {
   font-size: 28px;
+  font-weight: 600;
   line-height: 0px;
   letter-spacing: -0.02666em;
 }
@@ -778,6 +853,9 @@ main > * {
 .contact__form .FormFieldLayout__Container-sc-5t8s6i-3 {
   padding: 0 10px;
 }
+.contact__form .FormFieldLayout__Container-sc-5t8s6i-3:last-child {
+  margin-bottom: 32px;
+}
 .contact__form .FormLayout__FieldsGrid-sc-2kg2eg-8 {
   margin-left: -10px;
   margin-right: -10px;
@@ -790,6 +868,7 @@ main > * {
   font-weight: 600;
   font-size: 13px;
   line-height: 7.6923076923% !important;
+  margin-bottom: 16px !important;
 }
 .contact__form .Component__LongTextControl-sc-1d5gelu-0 {
   height: 95px;
@@ -814,8 +893,8 @@ main > * {
   border-radius: 4px;
   font-size: 14px;
   transition: background-color 0.3s ease !important;
-  width: 100%;
-  height: 100%;
+  padding: 4px 40px;
+  min-width: 100%;
 }
 .contact__form button:hover:before {
   background-color: transparent !important;
@@ -836,6 +915,47 @@ main > * {
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .contact__wrapper {
+    padding-left: 0;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .contact__title {
+    font-size: 45px;
+    line-height: 100%;
+  }
+}
+@media (max-width: 496px) {
+  .contact__wrapper {
+    gap: 28px;
+  }
+  .contact__title {
+    font-size: 34px;
+    line-height: 117.6470588235%;
+  }
+  .contact__form .WidgetTitle__Container-sc-ruy1gu-0 {
+    margin-bottom: 28px;
+  }
+  .contact__form .WidgetTitle__Header-sc-ruy1gu-2 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  .contact__form .FormFieldLayout__Container-sc-5t8s6i-3 {
+    margin-bottom: 20px;
+  }
+  .contact__form .FormFieldLayout__Container-sc-5t8s6i-3:last-child {
+    margin-bottom: 40px;
+  }
+  .contact__form .FormLayout__ButtonsGroup-sc-2kg2eg-12 {
+    justify-content: center;
+  }
+}
+@media (max-width: 486px) {
+  .main-contact {
+    padding: 40px 0;
+  }
+}
 .footer {
   margin-top: 97px;
   background: #363636;
@@ -1007,7 +1127,15 @@ main > * {
     flex-wrap: wrap;
   }
 }
+@media (max-width: 768px) {
+  main > * {
+    padding: 100px 0;
+  }
+}
 @media (max-width: 486px) {
+  .footer__top {
+    padding: 60px 0 0 0;
+  }
   .footer__bottom {
     padding: 36px 0;
   }
@@ -1028,9 +1156,6 @@ main > * {
 @media (max-width: 424px) {
   .footer__container {
     padding: 0 10px;
-  }
-  .footer__top {
-    padding: 60px 0 0 0;
   }
   .footer__logo {
     position: unset;
@@ -1054,7 +1179,8 @@ main > * {
   .footer-nav__list:last-child .footer-nav__title {
     justify-content: center;
   }
-  .footer-nav__link, .footer-nav .contact-name {
+  .footer-nav__link,
+.footer-nav .contact-name {
     line-height: 128.5714285714%;
   }
 }
