@@ -228,7 +228,27 @@ main {
   top: 0;
   left: 0;
   background-color: $color-purple-1;
-
+  &.header_fixed{
+    position: fixed;
+    animation: translate .3s ease;
+    box-shadow: 0 5px 15px rgba(112, 79, 229, 0.8);
+    @keyframes translate {
+      from{
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }      
+    }
+    .header__nav{
+      padding: 16px 0;
+    }
+    .header__logo{
+      width: 45px;
+    }
+  }
   &__container {
     max-width: 1152px;
   }
@@ -274,7 +294,6 @@ main {
 @include max-w-768 {
   .header {
     background-color: $color-purple-1;
-
     &__nav {
       background-color: $color-purple-1;
     }
@@ -337,11 +356,17 @@ main {
 
 @include max-w-486 {
   .header {
+    &.header_fixed &__logo{
+      width: 30px;
+    }
+    &.header_fixed &__nav{
+      padding: 14px 0;
+    }
     &__nav {
       padding-top: 28px;
     }
 
-    &__logo {
+    &__logo{
       width: 39px;
     }
   }
@@ -395,7 +420,6 @@ main {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-
   &::before,
   &::after {
     content: '';
