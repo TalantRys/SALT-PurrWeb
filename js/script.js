@@ -42,10 +42,8 @@ $(document).ready(function () {
 // ШАПКА ФИКСИРОВАНА ПРИ СКРОЛЛЕ
 const header = document.querySelector('.header');
 const preview = document.querySelector('.main-preview');
-const headerHeight = header.offsetHeight;
 const previewHeight = preview.offsetHeight;
 
-console.log(headerHeight, previewHeight);
 window.addEventListener('scroll', function () {
   let scrollDistance = window.pageYOffset;
   if (scrollDistance >= previewHeight) {
@@ -98,8 +96,7 @@ window.onload = function () {
 
   window.addEventListener('scroll', function () {
     let scrollDistance = window.pageYOffset;
-    console.log(scrollDistance)
-    if (scrollDistance >= previewHeight-500) {
+    if (scrollDistance >= previewHeight/5) {
       if (!demo1.error) {
         demo1.start();
       } else {
@@ -117,5 +114,4 @@ window.onload = function () {
       }
     }
   });
-  
 }
